@@ -1,3 +1,4 @@
+require 'pry'
 
 def sort_array_asc(array)
    array.sort
@@ -43,8 +44,16 @@ def find_a(array)
      }
 end
 
-def sum_array(array)
-  array.inject{|sum, num| sum+num}
+#def sum_array(array)
+#  array.inject{|sum, num| sum+num}
+#end
+sum_array(array)
+sum = 0
+  array.inject do |num|
+    sum +=num
+    binding.pry
+  end
+  sum
 end
 
 def add_s(array)
@@ -53,5 +62,5 @@ def add_s(array)
     i.split()
     i[i.length]="s"
    end
- end
+  end
 end
