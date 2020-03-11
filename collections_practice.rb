@@ -59,6 +59,7 @@ end
 def add_s(array)
   array.each do |i|
    if i !=  array[1]
+    i.split()
     i[i.length]="s"
    end
   end
